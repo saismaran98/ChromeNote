@@ -6,10 +6,24 @@
 
 let changeColor = document.getElementById('changeColor');
 
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
-});
+document.getElementById('save').onclick = function(){
+ // document.getElementById("list").innerHTML = document.getElementById("userNote").value;
+ 
+  
+  var noteList = document.createElement('p');
+  var noteData = document.createTextNode(document.getElementById("userNote").value);
+  console.log(noteList.appendChild(noteData));
+  document.body.appendChild(noteList);
+  chrome.storage.sync.set({"noteList":noteList},function(){});
+ 
+  document.getElementById("userNote").value = ""
+}
+document.getElementById("getNotes").onclick = function(){
+  chrome.storage.sync.get('color', function(data) {
+    changeColor.style.backgroundColor = data.color;
+    changeColor.setAttribute('value', data.color);
+  })
+};
 
 changeColor.onclick = function(element) {
   let color = element.target.value;

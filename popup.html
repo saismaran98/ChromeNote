@@ -9,18 +9,21 @@
       button {
         /* height: 30px; */
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         margin-left: 20px;
         width: 90px;
+        padding: 0px 50px;
         border-radius: 40px;
         outline: none;
       }
     </style>
   </head>
   <body>
-    <h4 style="padding:16%; width: 400px;">Write Notes</h4>
-    <input type="text">
-    <button id="save" class="btn btn-success">save</button>
+    <h4 style="padding:6%; width: 400px;">Write Notes</h4>
+    <p id="list"></p>
+    <input id="userNote" type="text" style="margin-left: 19px;">
+        <button id="save" class="btn btn-success">add note</button>
+        <!-- <button id="getNotes">getNotes</button> -->
     <script src="popup.js"></script>
   </body>
 </html>

@@ -3,6 +3,11 @@
 // found in the LICENSE file.
 
 'use strict';
+class UserData{
+  comstructor(){
+    
+  }
+}
 
 chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({color: '#3aa757'}, function() {
