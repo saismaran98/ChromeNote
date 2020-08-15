@@ -9,8 +9,8 @@ let changeColor = document.getElementById('changeColor');
 document.getElementById('save').onclick = function(){
  // document.getElementById("list").innerHTML = document.getElementById("userNote").value;
  
-  
-  var noteList = document.createElement('p');
+ event.preventDefault();
+  var noteList = document.createElement('li');
   var noteData = document.createTextNode(document.getElementById("userNote").value);
   console.log(noteList.appendChild(noteData));
   document.body.appendChild(noteList);
